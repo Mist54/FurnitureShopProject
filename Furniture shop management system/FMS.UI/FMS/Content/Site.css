@@ -1,0 +1,112 @@
+﻿body {
+    margin: 0;
+}
+
+.wrapper {
+    width: 100%;
+    min-height: 100vh;
+    background: url(image/shops.jpg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.registration-box {
+    background: #fff;
+    width: 900px;
+    border-radius: 8px;
+    font-family: Century;
+    font-weight: 700;
+    position: relative;
+    display: flex;
+    box-shadow: 20px 10px 20px #000000;
+}
+
+    .registration-box .form-left-box {
+        margin-bottom: -3px;
+    }
+
+.form-left-box {
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    border-top-right-radius: 8px;
+    border-radius: 8px;
+}
+
+.registration-box .form-detail {
+    padding: 30px 40px;
+    position: relative;
+    width: 100%;
+}
+
+    .registration-box .form-detail h1 {
+        text-align: center;
+        font-size: 40px;
+        padding: 6px 0 0;
+        margin-bottom: 50px;
+        color: #00ff21;
+    }
+
+    .registration-box .form-detail .form-row {
+        width: 100%;
+    }
+
+    .registration-box.form-detail .form-row-last {
+        text-align: center;
+    }
+
+.inputbox {
+    margin-bottom: 40px;
+    width: 80%;
+    padding: 0 15px 10px 15px;
+    border-top: transparent;
+    border-left: transparent;
+    border-right: transparent;
+    color: #333;
+}
+
+.registration-box .form-detail input:focus {
+    border-top: solid #ff0000;
+    border-left: solid #ff0000;
+    border-right: solid #ff0000;
+    border-right: solid #ff0000;
+}
+
+.register-button {
+    background: #00ff21;
+    border-radius: 6px;
+    width: 160px;
+    padding: 10px;
+    border: none;
+    box-shadow: 0 3px 10px 0 #333;
+    font-family: Century;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+@media screen and (max-width:991px) {
+    .registration-box {
+        margin: 120px 20px;
+        flex-direction: column;
+    }
+
+    .register-box .form-left-box {
+        width: 100%;
+    }
+
+        .register-box .form-left-box img {
+            width: 100%;
+            border-bottom-left-radius: 0px;
+            border-top-right-radius: 8px;
+        }
+
+    .register-box .form-detail {
+        width: auto;
+        padding: 30px 20px 30px 20px;
+    }
+
+    .registration-box .form-detail .register-button {
+        margin-bottom: 80px;
+    }
+}

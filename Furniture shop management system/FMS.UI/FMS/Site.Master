@@ -1,0 +1,83 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="FMS.SiteMaster" %>
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head runat="server">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%: Page.Title %> - My ASP.NET Application</title>
+
+    <asp:PlaceHolder runat="server">
+        <%: Scripts.Render("~/bundles/modernizr") %>
+    </asp:PlaceHolder>
+    <link href="Content/bootstrap.css" rel="stylesheet" />
+    <link href="Content/Site.css" rel="stylesheet" />
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <script src="Scripts/toastr.min.js"></script>
+    
+       <asp:ContentPlaceHolder ID="HeadPlaceHolder" runat="server">
+    
+            </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form runat="server">
+      <nav class="navbar navbar-expand-lg navbar-light" style="background-color:#06ce0c">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#"><b>Furniture shop Management System</b></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="dashboard.aspx"><b>Home</b></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="supplier.aspx"><b>Supplier Details</b></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="employee.aspx"><b>Employee Details</b></a>
+        </li>
+           <li class="nav-item">
+          <a class="nav-link" href="attendence.aspx"><b>Attendence & payslip</b></a>
+        </li>
+          <li class="nav-item">
+          <a class="nav-link" href="sell2.aspx"><b>Selling and billing</b></a>
+        </li>
+           <li class="nav-item">
+          <a class="nav-link" href="order.aspx"><b>Order list</b></a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+           <b> Stock Detail</b>
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <li><a class="dropdown-item" href="stock2.aspx">View Stock</a></li>
+            <li><a class="dropdown-item" href="purchase.aspx">Purchase new stock</a></li>
+                <li><a class="dropdown-item" href="addproduct.aspx">Add product Online</a></li>
+              <li><a class="dropdown-item" href="online_order.aspx">View online order</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+       
+        <div class="container body-content">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server">
+            </asp:ContentPlaceHolder>
+            <hr />
+            <footer>
+
+
+            </footer>
+        </div>
+         
+        
+    <script src="Scripts/bootstrap.bundle.js"></script>
+           <asp:ContentPlaceHolder ID="ScriptsPlaceHolder" runat="server">
+            </asp:ContentPlaceHolder>
+    </form>
+</body>
+</html>
